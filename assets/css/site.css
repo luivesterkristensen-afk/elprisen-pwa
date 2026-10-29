@@ -1,8 +1,312 @@
 @import url('reset.css');
 
 
-
-:root{
-    --primary: ;
-    --secondary: ;
+:root {
+    --systemBlack: #201E1E;
+    --systemGrey: #27282B;
+    --jsGreen: #55EC20;
+    --systemWhite: #EBEBEB;
 }
+/* STYLING PÅ GENGÅENDE ELEMENTER */
+body {
+    font-family: Roboto, sans-serif;
+    background-color: var(--systemGrey);
+    color: var(--systemWhite);
+}
+
+
+h1 {
+    font-size: 32px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+/* AKTIV LINK */
+.active {
+    color: var(--jsGreen);
+}
+
+
+/* NAVIGATION */
+nav {
+    background-color: var(--systemBlack);
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 20px;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--systemBlack);
+    padding: 20px;
+    text-align: center;
+    
+}
+
+/* SETTINGS BUTTON */
+#settingsBtn {
+    display: flex;
+    justify-content: end;
+    padding-inline: 20px;
+    padding-top: 20px;
+}
+
+#settingsBtn > img {
+    width: 22px;
+}
+
+
+
+/* LIGE NU SEKTION */
+
+#ligeNuSektion > section {
+    display: grid;
+    place-items: center;
+}
+
+#ligeNuSektion > section > img {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#ligeNuSektion > section > div {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+    color: var(--jsGreen);
+}
+
+#ligeNuSektion > section > div > h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+#ligeNuSektion > section > div > p {
+font-size: 20px;
+    font-weight: 500;
+}
+
+#ligeNuSektion > h3 {
+    color: var(--jsGreen);
+    padding: 2%;
+    text-align: center;
+}
+
+/* OVERSIGT SEKTION */
+#oversigtSektion > section:first-of-type{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 15%;
+}
+#oversigtSektion > section:first-of-type > div {
+    display: grid;
+    place-items: center;
+    
+}
+
+#oversigtSektion > section:first-of-type > div > img{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#oversigtSektion > section:first-of-type > div > div{
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+}
+
+#oversigtSektion > section:first-of-type > div > div > h2{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+#oversigtSektion > section:first-of-type > div > div > p{
+    font-size: 10px;
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+/* HISTORIK SEKTION */
+
+
+#datePicker{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#datePicker > input {
+    width: 80%;
+    padding: 15px;
+    background-color: var(--systemBlack);
+    border: none;
+    border-radius: 5px;
+    color: var(--systemWhite);
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+ #datePicker > input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2355EC20' stroke-width='2'%3E%3Crect x='3' y='5' width='18' height='17' rx='1'/%3E%3Cpath d='M7 2v5m10-5v5M3 10h18M7 14h2m2 0h2m2 0h2M7 18h2m2 0h2m2 0h2'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+#selectedDateHeading{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+/* PRICES BY HOUR SEKTION */
+#pricesByHour{
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    width: 80%;
+    height: 30vh;
+    min-height: 150px;
+    overflow-y: auto;
+    text-align: center;
+    scrollbar-width: none; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#pricesByHour > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px;
+    padding-inline: 20px;
+    border-radius: 8px;
+    background-color: var(--systemBlack);
+}
+
+#pricesByHour > div > p:nth-child(1){
+    padding-inline: 20px;
+}
+
+#pricesByHour > div > p:nth-child(2){
+    padding-inline: 40px;
+}
+
+
+
+
+/* DESKTOP VIEW */
+@media(min-width: 1000px){
+    
+    #dyn {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    h1 {
+        margin-top: 30px;
+    }
+    
+    #settingsBtn {
+    display: flex;
+    justify-content: end;
+    padding: 0;
+}
+
+nav {
+    align-items: center;
+}
+
+nav > div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    color: var(--jsGreen);
+}
+
+#ligeNuSektion > section > img {
+    width: 250px;
+}
+
+#oversigtSektion > section:first-of-type{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 20%;
+}
+
+#oversigtSektion > section > div > img {
+    width: 100px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    background-color: var(--systemGrey);
+    padding: 0;
+    text-align: start;
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+footer > div > p {
+    margin-bottom: 8px;
+}
+
+
+
+#selectedDateHeading {
+    display: none;
+}
+
+/* Jeg kunne ikke få det til at aligne.. */
+#desktopDiv1,
+#desktopDiv2,
+#desktopDiv3,
+#ligeNuSektion,
+#historikSektion {
+    display: flow-root;
+}
+
+#dyn h1 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+#desktopDiv2 > #pricesByHour {
+    margin-top: 0;
+}
+
+
+
+}
+
+
+
+
+
+
+
