@@ -17,10 +17,10 @@ export default async function oversigt(destination, prices){
     <div><img src="assets/img/circleoversigt.svg"><div><h2>${prices.billigste.toFixed(3)} KR</h2><p>PR. KWH</p></div><p>Laveste Pris</p></div>
     <div><img src="assets/img/circleoversigt.svg"><div><h2>${prices.dyreste.toFixed(3)} KR</h2><p>PR. KWH</p></div><p>Højeste Pris</p></div>
     </section>
-    <section id="pricesByHour">
+    <section class="pricesByHour">
     </section>
     `
-    const pricesByHour = oversigt.querySelector("#pricesByHour")
+    const pricesByHour = oversigt.querySelector(".pricesByHour")
     hourlyPrices(pricesByHour, await fetchPrices())
 
     // APPEND TIL HTML
@@ -45,7 +45,7 @@ export async function pricesByHourComponent(destination, name) {
     heading.textContent = name;
 
     const pricesByHour = document.createElement("section");
-    pricesByHour.id = "pricesByHour";
+    pricesByHour.classList.add("pricesByHour")
 
     destination.appendChild(heading);
     destination.appendChild(pricesByHour);

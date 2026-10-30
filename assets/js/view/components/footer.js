@@ -21,8 +21,8 @@ Du vises lige nu priserne for <span>Øst</span> Danmark</h5>
      footer.innerHTML = 
      `
      <div>
-     <p>alle priser er eksl. moms og<br> afgifter.</p>
-     <p>Du vises lige nu priserne for region<br> øst danmark</p>
+     <p>alle priser er <span>eksl. moms</span> og<br> afgifter.</p>
+     <p>Du vises lige nu priserne for region<br> <span>øst danmark</span></p>
      </div>
      `
 

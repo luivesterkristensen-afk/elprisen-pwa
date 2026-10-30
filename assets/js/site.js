@@ -68,3 +68,9 @@ addEventListenersToNavigation()
 init()
 findLowestAndHighestPrices()
 
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./service-worker.js")
+        .then(() => console.log("Service worker registreret"))
+        .catch(error => console.error("Service worker fejlede:", error));
+}
+

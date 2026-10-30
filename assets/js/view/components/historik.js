@@ -13,13 +13,13 @@ export default async function historik(destination){
     <input type="date">
     </section>
     <h2 id="selectedDateHeading">Vælg en dato</h2>
-    <section id="pricesByHour">
+    <section class="pricesByHour">
     
     </section>
     `
 
     const datePicker = historik.querySelector("input");
-    const pricesByHour = historik.querySelector("#pricesByHour");
+    const pricesByHour = historik.querySelector(".pricesByHour");
     const heading = historik.querySelector("#selectedDateHeading");
 
     datePicker.addEventListener("change", async () => {

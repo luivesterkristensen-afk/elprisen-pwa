@@ -57,7 +57,10 @@ footer {
     background-color: var(--systemBlack);
     padding: 20px;
     text-align: center;
-    
+}
+
+footer > h5 > span {
+    color: var(--jsGreen);
 }
 
 /* SETTINGS BUTTON */
@@ -123,23 +126,36 @@ font-size: 20px;
 #oversigtSektion > section:first-of-type > div > img{
     grid-column: 1;
     grid-row: 1;
+    
 }
 
 #oversigtSektion > section:first-of-type > div > div{
     grid-column: 1;
     grid-row: 1;
     text-align: center;
+    
 }
 
 #oversigtSektion > section:first-of-type > div > div > h2{
     font-size: 16px;
     font-weight: 300;
+    
 }
 
 #oversigtSektion > section:first-of-type > div > div > p{
     font-size: 10px;
     font-weight: 300;
     padding-top: 5px;
+    
+}
+
+#oversigtSektion > section:first-of-type > div > p  {
+    margin-top: 1%;
+    margin-bottom: 5%;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+    
 }
 
 /* HISTORIK SEKTION */
@@ -153,7 +169,8 @@ font-size: 20px;
 
 #datePicker > input {
     width: 80%;
-    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: var(--systemBlack);
     border: none;
     border-radius: 5px;
@@ -161,6 +178,8 @@ font-size: 20px;
     font-family: Roboto, sans-serif;
     font-weight: 300;
     font-size: 24px;
+    box-sizing: border-box;
+    padding-inline: 16px;
 }
 
  #datePicker > input::-webkit-calendar-picker-indicator {
@@ -178,7 +197,7 @@ font-size: 20px;
 }
 
 /* PRICES BY HOUR SEKTION */
-#pricesByHour{
+.pricesByHour{
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -194,7 +213,7 @@ font-size: 20px;
     gap: 10px;
 }
 
-#pricesByHour > div {
+.pricesByHour > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -205,11 +224,11 @@ font-size: 20px;
     background-color: var(--systemBlack);
 }
 
-#pricesByHour > div > p:nth-child(1){
+.pricesByHour > div > p:nth-child(1){
     padding-inline: 20px;
 }
 
-#pricesByHour > div > p:nth-child(2){
+.pricesByHour > div > p:nth-child(2){
     padding-inline: 40px;
 }
 
@@ -246,6 +265,10 @@ nav > div {
     color: var(--jsGreen);
 }
 
+footer > div > p > span {
+    color: var(--jsGreen);
+}
+
 #ligeNuSektion > section > img {
     width: 250px;
 }
@@ -276,6 +299,10 @@ footer > div > p {
     margin-bottom: 8px;
 }
 
+#datePicker{
+    margin-bottom: 38px;
+}
+
 
 
 #selectedDateHeading {
@@ -296,11 +323,20 @@ footer > div > p {
     line-height: 1.2;
 }
 
-#desktopDiv2 > #pricesByHour {
+#desktopDiv2 > .pricesByHour {
     margin-top: 0;
 }
 
+.pricesByHour {
+    height: 65vh;
+    margin: 0 auto;
+    overflow-y: auto;
+}
 
+#historikSektion > .pricesByHour {
+    height: calc(65vh - 90px);
+    margin-top: 20px;
+}
 
 }
 
